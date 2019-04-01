@@ -3,7 +3,7 @@ import PlaygroundSupport
 
 final class CustomView: NSView {
 	override func draw(_ dirtyRect: NSRect) {
-		guard let context = NSGraphicsContext.current()?.cgContext else { return }
+        guard let context = NSGraphicsContext.current?.cgContext else { return }
 
 		NSColor.white.setFill()
 		context.fill(bounds)
@@ -27,7 +27,7 @@ view.layer
 PlaygroundPage.current.liveView = view
 
 let image = NSImage(size: CGSize(width: 320, height: 320), flipped: true) { bounds in
-	guard let context = NSGraphicsContext.current()?.cgContext else { return false }
+    guard let context = NSGraphicsContext.current?.cgContext else { return false }
 
 	NSColor.white.setFill()
 	context.fill(bounds)
